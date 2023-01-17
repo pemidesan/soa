@@ -55,6 +55,7 @@ int main(int argc, char *argv[]) {
         dirp = opendir(argv[1]);
         if (dirp == NULL) {
             printf("Error. No se pudo abrir el directorio\n");
+            retorno = 2;
             exit(2);
         } else {
             while ((direntp = readdir(dirp)) != NULL) {
